@@ -198,3 +198,14 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+@mixin section(){
+  padding: 30px 100px;
+  background-color: $primaryFont;
+
+  @media (max-width: 900px) {
+    padding: 30px 25px;
+  }
+}
+
+

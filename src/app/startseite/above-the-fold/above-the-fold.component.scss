@@ -1,0 +1,43 @@
+@import "./../../../styles.scss";
+
+section {
+  @include section();
+}
+
+.header-wrapper{
+    @include flex($fd: column);
+}
+
+.headline {
+  color: #000;
+  text-align: center;
+  font-family: Syne;
+  font-size: clamp(2.1875rem, 0.0739rem + 10.5682vw, 8rem);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 128px */
+  letter-spacing: -3.2px;
+}
+
+.name {
+  margin-top: 16px;
+  @include flex();
+  width: 80%;
+  white-space: nowrap;
+  max-width: 950px;
+  color: $secondaryFont;
+  text-align: center;
+  font-family: Overpass;
+  font-size: clamp(1.4375rem, 0.8693rem + 2.8409vw, 3rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 48px */
+  letter-spacing: -1.2px;
+}
+
+#line {
+  background-color: #000;
+  height: 3px;
+  width: 100%;
+  margin-right: 8px;
+}
