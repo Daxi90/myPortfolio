@@ -1,0 +1,7 @@
+@import './../../../styles.scss';
+
+header{
+    @include flex($fd: row, $al: center, $jc: space-between);
+    background-color: $primaryFont;
+    padding: 30px 100px;
+}

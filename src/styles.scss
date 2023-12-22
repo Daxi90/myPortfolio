@@ -187,6 +187,13 @@
 $primaryFont: #fffcf3;
 $secondaryFont: #00bc8f;
 
+@mixin flex($fd: row, $al: center, $jc: center){
+    display: flex;
+    align-items: $al;
+    justify-content: $jc;
+    flex-direction: $fd;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
