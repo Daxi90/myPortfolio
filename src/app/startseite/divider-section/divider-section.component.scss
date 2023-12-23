@@ -1,0 +1,23 @@
+@import "./../../../styles.scss";
+
+section {
+  @include flex($jc: space-between);
+  @include section();
+  min-height: 150px;
+}
+
+#mail {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+#scroll {
+  white-space: pre-line;
+  font-family: Overpass;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%; /* 23px */
+  letter-spacing: -0.575px;
+}
