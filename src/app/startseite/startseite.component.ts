@@ -7,6 +7,8 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { DividerSectionArrow2Component } from './divider-section-arrow-2/divider-section-arrow-2.component';
 import { PortfolioHeaderComponent } from './portfolio-header/portfolio-header.component';
 import { PortfolioProject1Component } from './portfolio-project1/portfolio-project1.component';
+import { PortfolioProject2Component } from './portfolio-project2/portfolio-project2.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @Component({
   selector: 'app-startseite',
@@ -20,6 +22,8 @@ import { PortfolioProject1Component } from './portfolio-project1/portfolio-proje
     DividerSectionArrow2Component,
     PortfolioHeaderComponent,
     PortfolioProject1Component,
+    PortfolioProject2Component,
+    ContactFormComponent
   ],
   templateUrl: './startseite.component.html',
   styleUrl: './startseite.component.scss',

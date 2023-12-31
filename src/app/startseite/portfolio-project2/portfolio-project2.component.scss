@@ -1,0 +1,43 @@
+@import "./../../../styles.scss";
+
+section {
+  @include flex($jc: center, $al: stretch, $fd:row-reverse);
+  @include section();
+}
+
+.potfolioDate {
+  color: #000;
+  text-align: right;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Syne;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 57.6px */
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+div {
+  width: 49%;
+}
+
+img {
+  width: 100%;
+  filter: grayscale(1);
+}
+
+@media screen and (max-width: 1050px) {
+  section {
+    @include flex($jc: center, $al: stretch, $fd: column-reverse);
+  }
+
+  div {
+    width: 100%;
+  }
+
+  .potfolioDate {
+    margin-bottom: 26px;
+  }
+}
