@@ -5,11 +5,12 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { DividerSectionArrow1Component } from './divider-section-arrow-1/divider-section-arrow-1.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { DividerSectionArrow2Component } from './divider-section-arrow-2/divider-section-arrow-2.component';
+import { PortfolioHeaderComponent } from './portfolio-header/portfolio-header.component';
 
 @Component({
   selector: 'app-startseite',
   standalone: true,
-  imports: [AboveTheFoldComponent, DividerSectionComponent, AboutMeComponent, DividerSectionArrow1Component, MySkillsComponent, DividerSectionArrow2Component],
+  imports: [AboveTheFoldComponent, DividerSectionComponent, AboutMeComponent, DividerSectionArrow1Component, MySkillsComponent, DividerSectionArrow2Component, PortfolioHeaderComponent],
   templateUrl: './startseite.component.html',
   styleUrl: './startseite.component.scss'
 })
