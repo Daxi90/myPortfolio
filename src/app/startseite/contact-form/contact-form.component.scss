@@ -1,0 +1,49 @@
+@import "./../../../styles.scss";
+
+section {
+  @include flex($fd: column, $al: start);
+  @include section();
+  min-height: 250px;
+  background-image: url("/assets/img/contactFormShape.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#formHeader {
+  padding-top: 100px;
+  color: #fffcf3;
+  text-align: center;
+  font-family: Syne;
+  font-size: clamp(2.8125rem, 2.0625rem + 3.75vw, 4.875rem);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 78px */
+  letter-spacing: 0.78px;
+  white-space: no;
+}
+
+.formContainer {
+  @include flex($fd: column);
+  padding-top: 100px;
+}
+
+#formHeadline {
+  color: #00bc8f;
+  text-align: center;
+  font-family: Overpass;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 38.4px */
+  margin-bottom: 18px;
+}
+
+#formSubHeadline {
+  color: #fffcf3;
+  text-align: center;
+  font-family: Overpass;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 27.6px */
+}
