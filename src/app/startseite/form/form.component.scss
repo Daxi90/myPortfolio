@@ -1,0 +1,74 @@
+@import "./../../../styles.scss";
+
+@mixin responsiveForm {
+  width: 100%;
+
+  @media screen and (max-width: 700px) {
+    width: 80%;
+  }
+}
+
+form {
+  @include flex($fd: column);
+  @include responsiveForm();
+  gap: 20px;
+
+  input {
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: black;
+    padding: 15px 25px;
+    @include responsiveForm();
+  }
+
+  textarea {
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: black;
+    padding: 15px 25px;
+    @include responsiveForm();
+  }
+
+  ::placeholder {
+    color: white;
+  }
+
+  label {
+    color: #fffcf3;
+    font-family: Overpass;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+  }
+
+  #checkboxContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    @include responsiveForm();
+  }
+
+  button {
+    padding: 20px 60px;
+    border: 4px solid #bbb;
+    opacity: 0.3;
+    background-color: black;
+    /* s2 shadow */
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    color: rgba(187, 187, 187, 1); 
+  }
+}
+
+#privacyPolicy {
+  color: #00bc8f;
+  font-family: Overpass;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+}
+
+input#dsgvo {
+  flex: 1;
+}
