@@ -1,0 +1,56 @@
+@import "./../../../styles.scss";
+
+section {
+  @include section();
+  @include flex($jc: space-between);
+  background-color: black;
+  color: white;
+
+  @media screen and (max-width: 600px) {
+    @include flex($fd: column);
+  }
+}
+
+#contact {
+  @include flex($fd: column, $al: flex-end);
+  gap: 20px;
+
+  a {
+    color: #fffcf3;
+    font-family: Overpass;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+  }
+
+  @media screen and (max-width: 600px) {
+    @include flex($fd: column);
+  }
+}
+
+#personal {
+  @include flex($fd: column, $al: flex-start);
+  gap: 20px;
+
+  span {
+    color: #fffcf3;
+
+    /* Style 1/subtitles */
+    font-family: Poppins;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 27.6px */
+  }
+
+  @media screen and (max-width: 600px) {
+    @include flex($fd: column);
+    margin-bottom: 20px;
+  }
+}
+
+#socialMedia {
+  @include flex();
+  gap: 42px;
+}

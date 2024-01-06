@@ -25,6 +25,7 @@ section {
 .formContainer {
   @include flex($fd: column);
   padding-top: 100px;
+  position: relative;
 }
 
 #formHeadline {
@@ -53,4 +54,14 @@ app-form {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#arrowUp{
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+
+  @media screen and (max-width: 1065px) {
+    display: none;
+  }
 }
