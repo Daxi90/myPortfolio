@@ -1,0 +1,112 @@
+@import "./../../../styles.scss";
+
+nav {
+  @include flex($fd: column);
+  background-color: red;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(-100%);
+}
+
+section {
+  @include flex($jc: space-between);
+  width: calc(100vw - 200px);
+  max-width: 100%;
+  gap: 35px;
+
+  a {
+    color: #000;
+    text-align: center;
+    font-family: Syne;
+    font-size: clamp(2.1875rem, 0.8011rem + 6.9318vw, 6rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 96px */
+    letter-spacing: -2.4px;
+  }
+}
+
+.show {
+  transform: translateX(0) !important;
+}
+
+#linkSection {
+  @include flex($fd: column);
+}
+
+#navFooter {
+  min-height: 250px;
+  background-image: url("/assets/img/contactFormShape.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 700px) {
+    min-height: 100px;
+  }
+}
+
+#headerSection {
+  padding: 30px 100px;
+}
+
+#sectionContainer {
+  @include flex($fd: column, $al: start);
+  width: calc(100vw - 200px);
+  padding-top: 200px;
+  padding-bottom: 30px;
+
+  @media screen and (max-width: 900px) {
+    @include flex($fd: column, $al: center);
+    gap: 30px;
+    width: calc(100vw - 100px);
+    padding-top: 100px;
+  }
+
+  @media screen and (min-width: 2160px) {
+    padding-top: 300px;
+  }
+}
+
+#footerHeading {
+  color: #fffcf3;
+  text-align: center;
+  font-family: Syne;
+  font-size: clamp(2.1875rem, 1.2102rem + 4.8864vw, 4.875rem);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%; /* 78px */
+  letter-spacing: 0.78px;
+}
+
+#footerMail {
+  color: #fffcf3;
+  font-family: Overpass;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%; /* 23px */
+  letter-spacing: -0.575px;
+}
+
+#lastCol {
+  @include flex($jc: space-between);
+  width: calc(100vw - 200px);
+
+  @media screen and (max-width: 900px) {
+    @include flex($fd: column);
+    width: calc(100vw - 100px);
+  }
+}
+
+#logoContainer {
+  @include flex();
+  gap: 42px;
+}

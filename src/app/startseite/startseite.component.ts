@@ -10,6 +10,7 @@ import { PortfolioProject1Component } from './portfolio-project1/portfolio-proje
 import { PortfolioProject2Component } from './portfolio-project2/portfolio-project2.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
+import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 
 @Component({
   selector: 'app-startseite',
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     PortfolioProject1Component,
     PortfolioProject2Component,
     ContactFormComponent,
-    FooterComponent
+    FooterComponent,
+    MobileMenuComponent
   ],
   templateUrl: './startseite.component.html',
   styleUrl: './startseite.component.scss',
