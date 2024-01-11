@@ -23,9 +23,15 @@ section {
   position: relative;
 }
 
-
-img.arrow{
-  position: absolute;
-  bottom: 100px;
+#arrow-animation {
+  position: relative;
+  text-align: center; /* Zentriert den Text horizontal */
 }
 
+
+img.arrow {
+  position: absolute;
+  bottom: 30px; /* Stellen Sie diesen Wert so ein, dass er den gewünschten Abstand zum Text hat */
+  left: 50%; /* Zentriert das Bild horizontal relativ zum Container */
+  transform: translateX(-50%); /* Verschiebt das Bild horizontal, um es genau zu zentrieren */
+}
