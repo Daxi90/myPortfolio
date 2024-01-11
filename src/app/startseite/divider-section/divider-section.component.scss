@@ -20,28 +20,12 @@ section {
   font-weight: 300;
   line-height: 100%; /* 23px */
   letter-spacing: -0.575px;
+  position: relative;
 }
 
 
 img.arrow{
   position: absolute;
-  bottom: 12%;
+  bottom: 100px;
 }
 
-@media screen and (max-width: 1215px) {
-  img.arrow{
-    bottom: 15%;
-  }
-}
-
-@media screen and (max-width: 1110px) {
-  img.arrow{
-    bottom: 22%;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  img.arrow{
-    display: none;
-  }
-}
