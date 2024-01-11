@@ -32,6 +32,10 @@ section {
   line-height: 100%; /* 78px */
   letter-spacing: 0.78px;
   margin-bottom: 52px;
+
+  &:hover {
+    color: $secondaryFont;
+  }
 }
 
 #btn {
@@ -52,23 +56,59 @@ section {
 }
 
 #devImg {
-  align-items: flex-end !important;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
 }
 
-@media screen and (max-width: 1500px) {
-  #devImg {
-    align-items: center !important;
-  }
+#devImg div {
+  position: relative;
+  display: inline-block;
+}
 
-  #leftBox {
-    align-items: center !important;
-  }
+#devImg div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent; /* Größe des Rahmens */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+#devImg div:hover::before {
+  transform: translate(10px, 10px); /* Verschiebung nach rechts unten */
+  border-color: black; /* Farbe des Rahmens */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 600px) {
+  #devImg div {
+    justify-content: center;
+  }
+}
+
+/* Media Query für Bildschirme mit einer Breite von 1500px oder weniger */
+@media screen and (max-width: 1500px) {
   #devImg {
-    img {
-      width: 100%;
-    }
+    justify-content: center; /* Zentriert den inneren Container (und damit das Bild) horizontal */
+  }
+
+  #devImg div {
+    display: flex;
+    justify-content: center; /* Zentriert das Bild innerhalb des div Containers */
+  }
+
+  #devImg div::before, #devImg div:hover::before {
+    border: none; /* Entfernt den Rahmen */
+    transform: none; /* Entfernt die Transformation */
   }
 }
