@@ -21,7 +21,7 @@ section {
 }
 
 #skillBoxHeader {
-    white-space: nowrap;
+  white-space: nowrap;
   position: absolute;
   top: -15%;
   left: 50%;
@@ -38,63 +38,74 @@ section {
   line-height: 100%; /* 78px */
   letter-spacing: 0.78px;
   background-color: $primaryFont;
+
+  &:hover {
+    color: $secondaryFont;
+  }
 }
 
-@media  screen and (max-width: 2520px) {
-    #skillBoxHeader {
-        top: -12%;
-    }
+.skill {
+  transition: transform 1.5s; // Definiert die Dauer der Transformations-Animation
+
+  &:hover {
+    transform: rotate(360deg); // Bild dreht sich einmal beim Hovern
+  }
 }
 
-@media  screen and (max-width: 1380px) {
-    #skillBoxHeader {
-        top: -10%;
-    }
+@media screen and (max-width: 2520px) {
+  #skillBoxHeader {
+    top: -12%;
+  }
 }
 
-@media  screen and (max-width: 1380px) {
-    #skillBoxHeader {
-        top: -8%;
-    }
+@media screen and (max-width: 1380px) {
+  #skillBoxHeader {
+    top: -10%;
+  }
 }
 
-@media  screen and (max-width: 1151px) {
-    #skillBoxHeader {
-        top: -14%;
-    }
-
-    #skillContainer {
-        gap: 45px;
-    }
+@media screen and (max-width: 1380px) {
+  #skillBoxHeader {
+    top: -8%;
+  }
 }
 
-@media  screen and (max-width: 1047px) {
-    #skillBoxHeader {
-        top: -10%;
-    }
+@media screen and (max-width: 1151px) {
+  #skillBoxHeader {
+    top: -14%;
+  }
+
+  #skillContainer {
+    gap: 45px;
+  }
 }
 
-
-@media  screen and (max-width: 773px) {
-    #skillBoxHeader {
-        top: -9%;
-    }
+@media screen and (max-width: 1047px) {
+  #skillBoxHeader {
+    top: -10%;
+  }
 }
 
-@media  screen and (max-width: 560px) {
-    #skillBoxHeader {
-        white-space: wrap;
-    }
+@media screen and (max-width: 773px) {
+  #skillBoxHeader {
+    top: -9%;
+  }
 }
 
-@media  screen and (max-width: 545px) {
-    #skillBoxHeader {
-        top: -9%;
-    }
+@media screen and (max-width: 560px) {
+  #skillBoxHeader {
+    white-space: wrap;
+  }
 }
 
-@media  screen and (max-width: 462px) {
-    #skillBoxHeader {
-        top: -5%;
-    }
+@media screen and (max-width: 545px) {
+  #skillBoxHeader {
+    top: -9%;
+  }
+}
+
+@media screen and (max-width: 462px) {
+  #skillBoxHeader {
+    top: -5%;
+  }
 }
