@@ -9,4 +9,16 @@ import { Component } from '@angular/core';
 })
 export class DividerSectionArrow1Component {
 
+  defaultImage: string = '/assets/img/arrowLeft.png';
+  hoverImage: string = '/assets/img/arrowLeft1.png';
+  currentImage: string = this.defaultImage;
+
+  changeImageOnHover(){
+    this.currentImage = this.hoverImage;
+  }
+
+  resetImage(){
+    this.currentImage = this.defaultImage;
+  }
+
 }

@@ -1,3 +1,10 @@
 <section>
-    <img src="/assets/img/arrowRight.png" alt="">
+  <div class="image-container">
+    <img
+      [src]="currentImage"
+      (mouseenter)="changeImageOnHover()"
+      (mouseleave)="resetImage()"
+      alt=""
+    />
+  </div>
 </section>

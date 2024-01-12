@@ -1,9 +1,27 @@
 @import "./../../../styles.scss";
 
+.image-container {
+    // Setze eine feste Breite und Höhe, basierend auf der Größe des größten Bildes
+    width: 200px; // Beispielwert
+    height: 200px; // Beispielwert
+    position: relative;
+    overflow: hidden;
+  }
+  
+
 section {
     @include flex($jc: flex-start);
     @include section();
     padding-left: 250px;
+
+    .image-container img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+      }
 }
 
 @media screen and (max-width: 1500px) {
@@ -16,11 +34,15 @@ section {
 }
 
 @media screen and (max-width: 500px) {
-    section{
-        
-        img{
-            width: 50%;
+    section {
+        .image-container {
+          width: 50%; // oder eine andere Größe, die hier passend ist
+    
+          img {
+            position: static;
+            transform: none;
+          }
         }
-    }
+      }
     
 }
