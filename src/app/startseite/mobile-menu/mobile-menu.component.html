@@ -1,7 +1,7 @@
 <nav id="mobileMenu" [ngClass]="{'show': menuOpen}">
     <section id="headerSection">
         <img src="/assets/img/logo.png" alt="">
-        <img src="/assets/img/burgerOpen.png" (click)="toggleMenuFunc()" alt="">
+        <img [src]="currentImage" (click)="toggleMenuFunc()" alt="">
     </section>
     <section id="linkSection">
         <a href="#">About me</a>

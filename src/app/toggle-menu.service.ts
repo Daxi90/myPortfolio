@@ -12,7 +12,11 @@ export class ToggleMenuService {
   constructor() { }
 
   changeToggle(toggle: boolean) {
-    this.toggleSource.next(toggle);
+
+    setTimeout(() => {
+      this.toggleSource.next(toggle);
+    }, 200);
+   
   }
 
 }

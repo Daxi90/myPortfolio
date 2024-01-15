@@ -57,7 +57,7 @@ export class HeaderComponent implements OnDestroy {
           this.imageIndex = 0; // Setzt den Index zurück
         }, 500); // 500ms Pause
       }
-    }, 100); // 100ms für jedes Bild
+    }, 80); // 100ms für jedes Bild
   }
   
 
