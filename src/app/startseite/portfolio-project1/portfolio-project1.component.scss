@@ -83,6 +83,7 @@ img {
 
 .portfolioDesc {
   @include flex($fd: column, $al: start);
+  gap: 16px;
 }
 
 .potfolioDate {
@@ -94,6 +95,8 @@ img {
   font-family: Overpass;
   font-size: 23px;
   font-weight: 300;
+  line-height: normal;
+  text-align: left;
 }
 
 .portfolioDescText {
@@ -107,4 +110,5 @@ img {
 #btn {
   @include buttonMob();
   margin-left: 0;
+  margin-bottom: 0;
 }
