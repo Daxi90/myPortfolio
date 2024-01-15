@@ -23,9 +23,10 @@ div {
   width: 49%;
 }
 
-img {
+#projectImage {
   width: 100%;
   filter: grayscale(1);
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 1050px) {
@@ -39,6 +40,10 @@ img {
 
   .potfolioDate {
     margin-bottom: 26px;
+  }
+
+  .portfolioArrow{
+    display: none !important;
   }
 }
 
@@ -61,10 +66,30 @@ img {
   z-index: 5;
 }
 
-#projectImg div:hover::before {
-  transform: translate(20px, 20px); /* Verschiebung nach rechts unten */
-  border-color: black; /* Farbe des Rahmens */
+section:hover #projectImg div::before {
+  transform: translate(20px, 20px);
+  border-color: black;
 }
+
+section:hover .portfolioDesc {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+section:hover .portfolioArrow {
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(0);
+}
+
+section:hover #projectImage {
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(0);
+  filter: grayscale(0);
+}
+
 
 .portfolioDescHeader {
   color: #000;
@@ -84,6 +109,27 @@ img {
 .portfolioDesc {
   @include flex($fd: column, $al: start);
   gap: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.5s ease, opacity 0.3s ease, visibility 0.3s ease;
+  transform: translateX(-100%);
+}
+
+#imageHolder{
+  position: relative;
+}
+
+.portfolioArrow{
+  position: absolute;
+  z-index: 10;
+  right: -7%;
+  bottom: 40%;
+  width: 10%;
+  height: auto;
+  transform: rotate(90deg);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
 
 .potfolioDate {
@@ -111,4 +157,8 @@ img {
   @include buttonMob();
   margin-left: 0;
   margin-bottom: 0;
+
+  @media screen and (max-width: 900px) {
+    display: block !important;
+  }
 }
