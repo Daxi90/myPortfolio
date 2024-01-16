@@ -53,4 +53,15 @@ section {
 #socialMedia {
   @include flex();
   gap: 42px;
+
+  img {
+    transition: all 300ms ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
 }
+
+
