@@ -64,9 +64,30 @@ section {
   }
 }
 
-#legalNotice:hover .underlined {
-  border-bottom: 2px solid $secondaryFont;
-  font-weight: 500;
+#legalNotice {
+  // Deine vorhandenen Stile für #legalNotice
+
+  .underlined {
+    position: relative;
+    text-decoration: none; // Entfernt die Standard-Unterstreichung
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $secondaryFont; // Farbe der Unterstreichung
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &:hover .underlined::after {
+    visibility: visible;
+    width: 100%;
+  }
 }
 
 
