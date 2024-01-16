@@ -64,4 +64,10 @@ section {
   }
 }
 
+#legalNotice:hover .underlined {
+  border-bottom: 2px solid $secondaryFont;
+  font-weight: 500;
+}
+
+
 
