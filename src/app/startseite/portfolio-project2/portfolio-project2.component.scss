@@ -67,7 +67,7 @@ div {
 }
 
 section:hover #projectImg div::before {
-  transform: translate(-20px, -20px);
+  transform: translate(-20px, 20px);
   border-color: black;
 }
 

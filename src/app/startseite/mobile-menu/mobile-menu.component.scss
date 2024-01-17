@@ -29,6 +29,7 @@ section {
     font-weight: 700;
     line-height: 100%; /* 96px */
     letter-spacing: -2.4px;
+    @extend .custom-link;
   }
 }
 
@@ -113,4 +114,61 @@ section {
 #logoContainer {
   @include flex();
   gap: 42px;
+}
+
+
+// Custom link styles
+.custom-link {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  padding: 16px;
+  transition: all 0.3s ease;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    transition: all 0.3s ease;
+  }
+
+  &::before {
+    left: 0;
+    width: 5px;
+    height: 25px;
+  }
+
+  &::after {
+    left: 0;
+    right: auto;
+    width: 25px;
+    height: 5px;
+  }
+
+  &:hover {
+    &::before {
+      height: 0;
+    }
+
+    &:not(:active)::after {
+      animation-name: borderanimation;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &:active {
+    outline: 5px solid black;
+
+    &::before, &::after {
+      display: none;
+    }
+  }
+}
+
+@keyframes borderanimation {
+  0%, 25% { width: 25px; left: 0; right: auto; }
+  50% { width: 100%; left: 0; right: auto; }
+  75%, 100% { width: 25px; right: 0; left: auto; }
 }
