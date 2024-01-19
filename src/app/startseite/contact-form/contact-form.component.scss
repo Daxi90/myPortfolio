@@ -4,7 +4,7 @@ section {
   @include flex($fd: column, $al: start);
   @include section();
   min-height: 250px;
-  background-image: url("/assets/img/contactFormShape.png");
+  background-image: url("../../../assets/img/contactFormShape.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

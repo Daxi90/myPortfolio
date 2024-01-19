@@ -9,13 +9,13 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class DividerSectionComponent implements OnInit, OnDestroy {
   private images = [
-    'assets/img/arrowanim0.png',
-    'assets/img/arrowanim1.png',
-    'assets/img/arrowanim2.png',
-    'assets/img/arrowanim3.png',
-    'assets/img/arrowanim4.png',
-    'assets/img/arrowanim5.png',
-    'assets/img/arrowanim6.png'
+    './assets/img/arrowanim0.png',
+    './assets/img/arrowanim1.png',
+    './assets/img/arrowanim2.png',
+    './assets/img/arrowanim3.png',
+    './assets/img/arrowanim4.png',
+    './assets/img/arrowanim5.png',
+    './assets/img/arrowanim6.png'
   ];
   currentImage = this.images[0];
   private currentIndex = 0;

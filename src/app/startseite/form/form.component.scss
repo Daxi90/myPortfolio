@@ -20,6 +20,16 @@ form {
     padding: 15px 25px;
     @include responsiveForm();
     color: white;
+
+    &:hover{
+      border: 2px solid white;
+    }
+
+    &:focus{
+      ::placeholder {
+        color: red !important;
+      }
+    }
   }
 
   textarea {
@@ -29,6 +39,10 @@ form {
     padding: 15px 25px;
     @include responsiveForm();
     color: white;
+
+    &:hover{
+      border: 2px solid white;
+    }
   }
 
   ::placeholder {
@@ -81,3 +95,39 @@ form {
 input#dsgvo {
   flex: 1;
 }
+
+.input-container {
+  position: relative;
+  margin-top: 25px;
+  @include responsiveForm();
+}
+
+.input-container input, .input-container textarea {
+  background-color: black;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  padding: 15px 25px;
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid white;
+  }
+  &:focus ~ label, &:not(:placeholder-shown) ~ label {
+    top: -6px;
+    left: 10px;
+    font-size: 12px;
+    color: white;
+    z-index: 9;
+    background-color: black;
+  }
+}
+
+.input-container label {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  transition: 0.3s;
+  color: white;
+  pointer-events: none;
+}
+

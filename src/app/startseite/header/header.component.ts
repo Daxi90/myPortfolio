@@ -13,13 +13,13 @@ export class HeaderComponent implements OnDestroy {
   menuOpen = false;
   subscription: Subscription;
 
-  currentImage = '/assets/img/burgerClosed.png';
+  currentImage = './assets/img/burgerClosed.png';
 
   menuImages = [
-    '/assets/img/burgerClosed.png',
-    '/assets/img/burgerClosed1.png',
-    '/assets/img/burgerClosed2.png',
-    '/assets/img/burgerClosed3.png',
+    './assets/img/burgerClosed.png',
+    './assets/img/burgerClosed1.png',
+    './assets/img/burgerClosed2.png',
+    './assets/img/burgerClosed3.png',
   ];
 
   private imageIndex = 0;

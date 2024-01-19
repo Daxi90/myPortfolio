@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
 export class DividerSectionArrow2Component {
 
   
-  defaultImage: string = '/assets/img/arrowRight.png';
-  hoverImage: string = '/assets/img/arrowRight1.png';
+  defaultImage: string = './assets/img/arrowRight.png';
+  hoverImage: string = './assets/img/arrowRight1.png';
   currentImage: string = this.defaultImage;
 
   changeImageOnHover(){

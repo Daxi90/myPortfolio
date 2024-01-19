@@ -14,13 +14,13 @@ export class MobileMenuComponent implements OnDestroy {
   menuOpen = false;
   subscription: Subscription;
 
-  currentImage = '/assets/img/burgerOpen.png';
+  currentImage = './assets/img/burgerOpen.png';
 
   menuImages = [
-    '/assets/img/burgerOpen.png',
-    '/assets/img/burgerOpen1.png',
-    '/assets/img/burgerOpen2.png',
-    '/assets/img/burgerOpen3.png',
+    './assets/img/burgerOpen.png',
+    './assets/img/burgerOpen1.png',
+    './assets/img/burgerOpen2.png',
+    './assets/img/burgerOpen3.png',
   ];
 
   private imageIndex = 0;
