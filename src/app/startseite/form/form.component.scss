@@ -64,6 +64,8 @@ form {
     align-items: center;
     justify-content: center;
     @include responsiveForm();
+    position: relative; /* Erstellt einen neuen Stacking Context NEEUEUU*/
+    z-index: 0; /* Basis für die inneren Elemente NEEUEUU */
   }
 
   button {
@@ -149,6 +151,8 @@ html {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  z-index: 1; /* Höher als der Kreis, aber niedriger oder gleich zur Checkbox NEEEUUE*/
 }
 
 /* Hide the browser's default checkbox */
@@ -211,7 +215,7 @@ html {
 /* Style the checkmark/indicator */
 .container .checkmark:after {
   left: 5px;
-  top: 2px;
+  top: 1px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -219,4 +223,31 @@ html {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/* Grundstil für den Kreis */
+.hover-circle {
+  position: absolute;
+  top: -3px; /* Anpassen für korrekte Positionierung */
+  left: -3px; /* Anpassen für korrekte Positionierung */
+  width: 28px; /* Größe des Kreises */
+  height: 28px; /* Größe des Kreises */
+  background-color: transparent; /* Transparent, bis zum Hovern */
+  border-radius: 50%; /* Kreisform */
+  transition: background-color 0.3s; /* Sanfte Übergänge */
+  z-index: -1; /* Hinter der Checkbox */
+}
+
+/* Stil beim Hovern */
+.container:hover .hover-circle {
+  background-color: $secondaryFont; /* Farbe beim Hovern */
+}
+
+.container:hover #privacyPolicy {
+  font-weight: bold; /* Farbe beim Hovern */
+}
+
+.container input[type="checkbox"] {
+  position: relative;
+  z-index: 2; /* Höchster im Stacking Context, erscheint über dem Kreis */
 }
