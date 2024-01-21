@@ -4,6 +4,7 @@ section {
   @include flex($jc: space-between);
   @include section();
   min-height: 400px;
+  height: 40vh;
 }
 
 #mail {

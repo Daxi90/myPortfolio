@@ -2,6 +2,7 @@
 
 section {
   @include section();
+  height: 55vh;
 }
 
 .header-wrapper{

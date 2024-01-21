@@ -4,6 +4,7 @@ header{
     @include flex($fd: row, $al: center, $jc: space-between);
     @include section();
     background-color: $primaryFont;
+    height: 5vh;
 
     img{
         cursor: pointer;
