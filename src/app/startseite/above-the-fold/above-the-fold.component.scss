@@ -2,11 +2,13 @@
 
 section {
   @include section();
+  @include flex();
   height: 55vh;
 }
 
 .header-wrapper{
     @include flex($fd: column);
+    width: 100%;
 }
 
 .headline {
