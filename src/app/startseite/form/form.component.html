@@ -1,23 +1,43 @@
-<form id="contactForm" (submit)="sendMail()" ngNativeValidate #myForm>
+<form id="contactForm" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
   <div class="input-container">
-    <input required name="name" placeholder=" " type="text" #nameField />
+    <input
+      [(ngModel)]="contactData.name"
+      required
+      name="name"
+      placeholder=" "
+      type="text"
+      #nameField
+    />
     <label>Your Name</label>
   </div>
   <div class="input-container">
-    <input required type="email" placeholder=" " name="email" #emailField />
+    <input
+      [(ngModel)]="contactData.email"
+      required
+      type="email"
+      placeholder=" "
+      name="email"
+      #emailField
+      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+    />
     <label>Your Email</label>
   </div>
   <div class="input-container">
     <textarea
+      [(ngModel)]="contactData.message"
       required
       name="message"
       placeholder=" "
       id=""
       cols="30"
       rows="10"
-      #messageField
+      minlength="10"
+      #messageBox="ngModel"
     ></textarea>
     <label>Your Message</label>
+    @if (!messageBox.valid && messageBox.touched) {
+      <span style="color: red;">Please enter a message</span>
+    }
   </div>
 
   <div id="checkboxContainer">
