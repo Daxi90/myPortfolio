@@ -11,12 +11,15 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 })
 export class FormComponent {
 
+  isSending = false;
+
   http = inject(HttpClient);
 
   contactData = {
     name: '',
     email: '',
     message: '',
+    agreedToPrivacyPolicy: false, // Initialwert auf false setzen
   };
 
   mailTest = false;
@@ -34,19 +37,21 @@ export class FormComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.isSending = true; // Vor dem Senden auf true setzen
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
+            this.isSending = false; // Nach Abschluss auf false setzen
           },
           error: (error) => {
             console.error(error);
+            this.isSending = false; // Auch bei Fehler auf false setzen
           },
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      this.isSending = false; // Zurücksetzen, falls mailTest aktiv ist
       ngForm.resetForm();
     }
   }
