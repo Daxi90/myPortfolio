@@ -243,11 +243,17 @@ html {
   background-color: $secondaryFont; /* Farbe beim Hovern */
 }
 
-.container:hover #privacyPolicy {
-  font-weight: bold; /* Farbe beim Hovern */
-}
+//.container:hover #privacyPolicy {
+//  font-weight: bold; /* Farbe beim Hovern */
+//}
 
 .container input[type="checkbox"] {
   position: relative;
   z-index: 2; /* Höchster im Stacking Context, erscheint über dem Kreis */
+}
+
+#sendButton:hover{
+  transition: all 250ms ease-in-out;
+  color: $secondaryFont;
+  border-color: $secondaryFont;
 }

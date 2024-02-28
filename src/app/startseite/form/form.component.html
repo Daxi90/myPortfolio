@@ -7,8 +7,12 @@
       placeholder=" "
       type="text"
       #nameField
+      #nameFieldVal="ngModel"
     />
     <label>Your Name</label>
+    @if (!nameFieldVal.valid && nameFieldVal.touched) {
+      <span style="color: red; font-family: Overpass; font-size: 12px;">Please enter a Name</span>
+    }
   </div>
   <div class="input-container">
     <input
@@ -18,9 +22,13 @@
       placeholder=" "
       name="email"
       #emailField
+      #emailFieldVal="ngModel"
       pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
     />
     <label>Your Email</label>
+    @if (!emailFieldVal.valid && emailFieldVal.touched) {
+      <span style="color: red; font-family: Overpass; font-size: 12px;">Please enter a valid Email Adress</span>
+    }
   </div>
   <div class="input-container">
     <textarea
@@ -36,7 +44,7 @@
     ></textarea>
     <label>Your Message</label>
     @if (!messageBox.valid && messageBox.touched) {
-      <span style="color: red;">Please enter a message</span>
+      <span style="color: red; font-family: Overpass; font-size: 12px;">Please enter a message longer than 10 Characters</span>
     }
   </div>
 
@@ -49,8 +57,11 @@
       <span class="hover-circle"></span>
     </label>
   </div>
+  @if (contactForm.submitted && !contactData.agreedToPrivacyPolicy) {
+    <span style="color: red; font-family: Overpass; font-size: 12px;">Please accept the privacy policy</span>
+  }
 
-  <button [disabled]="isSending" #sendButton>
+  <button [disabled]="isSending" #sendButton id="sendButton">
     {{ isSending ? 'Sending...' : 'Send Message' }}
   </button>
 </form>
